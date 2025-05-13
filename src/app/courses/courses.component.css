@@ -1,0 +1,57 @@
+/* Design for layout */
+main {
+    width: 80%;
+    margin: 0px auto;
+    background-color: rgb(225, 240, 247);
+}
+
+div {
+    width: 80%;
+    margin: 0px auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/* Design for input */
+input {
+    width: 30%;
+    padding: 5px;
+    margin-left: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(106, 107, 109)
+}
+
+/* Design for table */
+table {
+    margin-top: 20px;
+    width: 90%;
+}
+
+thead:hover {
+    cursor: pointer;
+}
+
+td {
+    padding: 5px;
+}
+
+tr:hover {
+    background-color: rgb(169, 214, 235);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Design for screens under 640px */
+@media screen and (max-width: 640px) {
+    main { width: 100%; }
+    input { width: 40%; }
+}
+
+/* Design for screens under 400px */
+@media screen and (max-width: 400px) {
+    div { width: 90%; }
+    input { width: 60%; }
+}

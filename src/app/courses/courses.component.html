@@ -1,0 +1,26 @@
+<main>
+    <div>
+        <h2>Kurslista</h2>
+        <!-- Input to search courses -->
+        <label for="search">Sök:</label>
+        <input type="text" name="search" id="search" [(ngModel)]="filterValue" (input)="filterSearch()" placeholder="Programmering i TypeScript">
+
+        <!-- Table with courses -->
+        <table>
+            <thead>
+                <tr>
+                    <td (click)="sortCourses($event)"><strong>Kurskod</strong></td>
+                    <td (click)="sortCourses($event)"><strong>Kursnamn</strong></td>
+                    <td (click)="sortCourses($event)"><strong>Progression</strong></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let course of filteredCourses">
+                    <td><a href="{{ course.syllabus }}">{{ course.code }}</a></td>
+                    <td><a href="{{ course.syllabus }}">{{ course.coursename }}</a></td>
+                    <td><a href="{{ course.syllabus }}">{{ course.progression }}</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</main>
